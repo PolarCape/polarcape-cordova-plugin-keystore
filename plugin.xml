@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+           id="com.polarcape.plugins.keystore"
+      version="1.0.0">
+
+    <name>Keystore/Keychain plugin</name>
+    <description>Cordova plugin for storing sensitive information in app keystore/keychain</description>
+    <license>MIT</license>
+    <author>Goran Kopevski, gkopevski</author>
+    <keywords>cordova,keychain,keystore,security,gkopevski</keywords>
+    <repo>https://github.com/PolarCape/polarcape-cordova-plugin-keystore.git</repo>
+
+    <js-module src="www/cordovaKeystore.js" name="keystore">
+        <clobbers target="keystore" />
+    </js-module>
+
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CordovaKeystore">
+                <param name="android-package" value="com.polarcape.plugins.keystore.CordovaKeystore"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/CordovaKeystore.java" target-dir="src/com/polarcape/plugins/keystore" />
+
+    </platform>
+
+</plugin>

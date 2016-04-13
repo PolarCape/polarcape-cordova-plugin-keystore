@@ -1,4 +1,4 @@
-com.polarcape.plugins.keystore
+com.polarcape.plugins.keystore (Android)
 ==============================
 
 Cordova plugin for storing sensitive information in app keystore/keychain
